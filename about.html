@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Yuktikula Event</title>
+    <link rel="shortcut icon" href="WhatsApp Image 2025-07-30 at 21.27.00_e7b2212c-modified.png" type="image/x-icon">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            background: #362400;
+            background: linear-gradient(90deg, rgba(54, 36, 0, 1) 0%, rgba(110, 102, 0, 1) 100%, rgba(237, 221, 83, 1) 91%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header{
+            margin-top: 8px;
+            height: 60px;
+            width: 95vw;
+            background-color: rgba(44, 44, 44, 0.754);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .header .logo{
+            height: 60px;
+            width: 18%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .header .logo img{
+            height: 40px;
+            margin: 10px;
+        }
+        .header .logotext{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-family: "Roboto Condensed", sans-serif;
+            font-weight: 600px;
+            color: rgb(230, 230, 230);
+        }
+        .header .main2{
+            font-size: 10px;
+            color: #9f9f9f;
+        }
+        .nav{
+            height: 60px;
+            width: 36%;
+            display: flex;
+            flex-direction: row;
+            color: rgb(230, 230, 230);
+            font-family: "Roboto Condensed", sans-serif;
+            font-size: 14px;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .nav a{
+            text-decoration: none;
+            color: rgb(230, 230, 230);;
+        }
+        .nav img{
+            height: 15px;
+            margin-right: 5px;
+        }
+        .nav .home a, .nav .announcement a, .nav .events a, .nav .about a{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .title{
+            width: 80vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .tit1{
+            margin-top: 10px;
+            font-family: "Roboto Condensed", sans-serif;
+            color: rgb(191, 153, 0);
+            font-size: 40px;
+            font-weight: 600;
+        }
+        .tit2{
+            margin-top: 5px;
+            color: rgb(201, 201, 201);
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .titbody{
+            font-family: sans-serif;
+            color: #eaeaea;
+            margin-top: 40px;
+            margin-left: 50px;
+            font-size: 15px;
+        }
+        .titimg img{
+            float: right;
+            width: 500px;
+            padding: 30px;
+            margin-right: 20px;
+            margin-top: 20px;
+            border-radius: 20px;
+        }
+        .card1{
+            margin-top: 50px;
+            padding-bottom: 40px;
+            width: 80vw;
+            background: #404040;
+            background: linear-gradient(180deg, rgba(64, 64, 64, 0.516) 0%, rgba(150, 150, 150, 0.484) 100%);
+            border-radius: 10px;
+        }
+        .card2{
+            width: 80vw;
+            margin-top: 40px;
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .mv-card{
+            width: 35vw;
+        }
+        .card2 .mv-card h2{
+            font-family: "Roboto Condensed", sans-serif;
+            font-size: 40px;
+            font-weight: 600;
+            color: rgb(191, 153, 0);
+            margin-bottom: 20px;
+        }
+        .card2 .mv-card p{
+            font-family: sans-serif;
+            color: rgb(230, 230, 230);
+            font-size: larger;
+        }
+        .line{
+            margin-top: 50px;
+            width: 90vw;
+            background-color: wheat;
+            height: 0.1vh;
+
+        }
+        .card3 .activity-grid{
+            width: 80vw;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .activity-grid .activity-item{
+            border-radius: 10px;
+            width: 18vw;
+            height: 280px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(44, 44, 44, 0.50);
+            font-family: sans-serif;
+            color: rgb(260,260,260);
+        }
+        .card3{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-top: 50px;
+        }
+        .card3 h2{
+            font-family: "Roboto Condensed", sans-serif;
+            font-size: 40px;
+            font-weight: 600;
+            color:#e8e8e8;
+        }
+        .card3 h4{
+            font-size: larger;
+        }
+        .card3 li{
+            margin: 20px;
+            font-size: 15px;
+        }
+        .card4{
+            margin-top: 50px;
+            padding: 40px;
+            width: 80vw;
+            background: #404040;
+            background: linear-gradient(180deg, rgba(64, 64, 64, 0.516) 0%, rgba(150, 150, 150, 0.484) 100%);
+            border-radius: 10px;
+        }
+        .card4mem{
+            display: grid;
+            justify-items: start;
+            align-items: center;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,1fr);
+        }
+        .teamMem{
+            width: 10vw;
+            height: 10vw;
+            background-color: green;
+            margin: 20px;
+            border-radius: 50%;
+        }
+        .footer{
+            width: 100%;
+            height: 100%;
+            background-color: #242424;
+            margin-top: 100px;
+        }
+        .footer-container{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            padding: 15px 20px 0;
+            color: #ccc;
+            font-family: sans-serif;
+            /* border: 1px solid wheat; */
+        }
+        .footer-col{
+            /* border: 1px solid wheat; */
+            padding: 50px;
+        }
+        .footer h3{
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .footer a{
+            color: #ccc;
+            text-decoration: none;
+        }
+        .footer a:hover{
+            color: #fff;
+        }
+        .footer ul{
+            list-style: none;
+            padding: 0;
+        }
+        .footer ul li{
+            margin-bottom: 8px;
+        }
+        .footerCR{
+            text-align: center;
+            padding: 15px;
+            color: #888;
+            border-top: 1px solid #444;
+            margin-top: 40px;
+            font-size: 13px;
+        }
+        @media (max-width: 700px){
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <div><img src="WhatsApp Image 2025-07-30 at 21.27.00_e7b2212c-modified.png" alt="logo"></div>
+            <div class="logotext">
+                <div class="main">Yuktikula Club</div>
+                <div class="main2">Official Club of CSE-DS Dept of GLBITM</div>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="home">
+                <a href="index.html">
+                    <div><img src="output-onlinepngtools.png" alt=""></div>
+                    <div>Home</div>
+                </a>
+            </div>
+            <div class="announcement">
+                <a href="#">
+                    <div><img src="output-onlinepngtools (1).png" alt=""></div>
+                    <div>Announcement</div>
+                </a>
+            </div>
+            <div class="events">
+                <a href="#">
+                    <div><img src="output-onlinepngtools (2).png" alt=""></div>
+                    <div>Events</div>
+                </a>
+            </div>
+            <div class="about">
+                <a href="#">
+                    <div><img src="output-onlinepngtools (3).png" alt=""></div>
+                    <div>About Us</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card1">
+        <div class="title">
+            <div class="tit1">About Yuktikula</div>
+            <div class="tit2">"Where Ideas Meet Innovation"</div>
+        <div class="tittheory">
+            <div class="titimg">
+                <img src="CSDS-Club.jpg" alt="">
+            </div>
+            <div class="titbody">
+                Yuktikula is the official technical and innovation-driven club under the Department of Computer Science and Data Science (CSDS). Founded with the spirit of collaboration and curiosity, the club serves as a dynamic platform where ideas are cultivated, skills are sharpened, and meaningful projects come to life. <br> <br>
+                We believe that the intersection of creativity and technology is where the future is built. Whether it’s coding, data analysis, AI, design, research, or product thinking—Yuktikula is a space where every tech enthusiast can thrive. Our community brings together passionate students who are eager to learn beyond the classroom, solve real-world problems, and take initiative. <br> <br>
+                Through a variety of activities—ranging from technical workshops, seminars, and hackathons to hands-on projects, knowledge-sharing sessions, and design sprints—we create opportunities for members to not only develop their technical toolkit but also grow in leadership, teamwork, and innovation. <br> <br>
+                Whether you're a beginner curious about coding or an advanced developer looking for your next challenge, Yuktikula welcomes you to be part of something impactful, inclusive, and truly exciting.
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="card2">
+        <div class="mv-card">
+            <h2>Our Mission</h2>
+            <p>(To empower students with technical and creative skills by organizing hands-on events, workshops, and mentorship programs in emerging tech domains.)</p>
+        </div>
+        <div class="mv-card">
+            <h2>Our Vision</h2>
+            <p>(To create a vibrant tech community that encourages innovation, peer learning, and holistic development beyond the classroom.)</p>
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="card3">
+        <h2>What We Do -</h2>
+        <div class="activity-grid">
+            <div class="activity-item"><h4>💻 Coding Contests</h4>
+                <div>
+                    <ul>
+                        <li>Weekly coding challenges</li>
+                        <li>DSA practice sessions</li>
+                        <li>College-wide code battles</li>
+                        <li>Hackathon preparation</li>
+                        <li>Competitive programming guidance</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="activity-item"><h4>🎨 UI/UX Designathons</h4>
+                <div>
+                    <ul>
+                        <li>Design thinking sessions</li>
+                        <li>Figma and prototyping workshops</li>
+                        <li>Real-world design problems</li>
+                        <li>Collaborative designathons</li>
+                        <li>Feedback & portfolio reviews</li>
+                    </ul>
+            </div>
+            </div>
+            <div class="activity-item"><h4>📢 Tech Talks</h4>
+                <ul>
+                    <li>Industry expert webinars</li>
+                    <li>Emerging tech trends</li>
+                    <li>Alumni sharing sessions</li>
+                    <li>Q&A & discussions</li>
+                    <li>Tech career insights</li>
+                </ul>
+            </div>
+            <div class="activity-item"><h4>🛠️ Project Showcases</h4>
+                <ul>
+                    <li>Student-led innovations</li>
+                    <li>Collaborative team projects</li>
+                    <li>Live demos & code walkthroughs</li>
+                    <li>Feedback from mentors</li>
+                    <li>GitHub and deployment tips</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="card4">
+        <div class="tit1">Know Our Team</div>
+        <div class="card4mem">
+            <div class="teamMem"></div>
+            <div class="teamMem"></div>
+            <div class="teamMem"></div>
+            <div class="teamMem"></div>
+            <div class="teamMem"></div>
+            <div class="teamMem"></div>
+            <div class="teamMem"></div>
+            <div class="teamMem"></div>
+            <div class="teamMem"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+            <h3>Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Announcement</a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p>Yuktikula Club, CSE-DS Department<br>
+                GL Bajaj, Greater Noida<br>
+                +91-8373909893 (Ms. Rachana Sisodia)</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <p>
+                    <a href="https://www.instagram.com/yuktikula_glbajaj?igsh=NmZyYm1ibDBmaGl3">Instagram</a> | 
+                    <a href="https://www.linkedin.com/company/yuktikula-club/">LinkedIn</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="footerCR">
+            <p>&copy; Yuktikula Club – All rights reserved.</p>
+        </div>
+    </div>
+ 
+</body>
+</html>
