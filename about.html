@@ -32,6 +32,7 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            align-items: center;
         }
         .header .logo{
             height: 60px;
@@ -265,45 +266,122 @@
                 text-align: center;
             }
         }
+        /* hamburger */
+        .menu-icon {
+            display: none;
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+        }
+        .nav-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            padding: 0 20px;
+        }
+        @media (max-width: 1100px) {
+        .logotext .main::before {
+                content: "Yuktikula";
+                margin-top: 7px;
+                visibility: visible;
+                position: absolute;
+        }
+        .logotext .main {
+                visibility: hidden;
+                font-size: 16px;
+                font-weight: 600;
+        }
+        .logotext .main2::before {
+                content: "CSE-DS Dept";
+                margin-top: 7px;
+                font-size: x-small;
+                visibility: visible;
+                position: absolute;
+        }
+        .logotext .main2 {
+                visibility: hidden;
+                font-size: 12px;
+                color: #bbb;
+        }
+        .menu-icon {
+                display: block;
+                margin-right: 4px;
+                margin-bottom: 4px;
+            }
+            .nav {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 70px;
+                right: 20px;
+                width: 200px;
+                padding: 15px;
+                border-radius: 10px;
+                z-index: 999;
+            }
+
+            .nav.show {
+                display: flex;
+            }
+
+            .nav > div {
+                margin-bottom: 12px;
+            }
+
+            .nav a {
+                font-size: 16px;
+                justify-content: flex-start;
+            }
+            }
     </style>
-    
+    <script>
+        function toggleMenu() {
+            document.getElementById('navMenu').classList.toggle('show');
+        }
+    </script>
 </head>
 <body>
     <div class="header">
-        <div class="logo">
-            <div><img src="WhatsApp Image 2025-07-30 at 21.27.00_e7b2212c-modified.png" alt="logo"></div>
-            <div class="logotext">
-                <div class="main">Yuktikula Club</div>
-                <div class="main2">Official Club of CSE-DS Dept of GLBITM</div>
-            </div>
-        </div>
-        <div class="nav">
-            <div class="home">
-                <a href="index.html">
-                    <div><img src="output-onlinepngtools.png" alt=""></div>
-                    <div>Home</div>
-                </a>
-            </div>
-            <div class="announcement">
-                <a href="#">
-                    <div><img src="output-onlinepngtools (1).png" alt=""></div>
-                    <div>Announcement</div>
-                </a>
-            </div>
-            <div class="events">
-                <a href="#">
-                    <div><img src="output-onlinepngtools (2).png" alt=""></div>
-                    <div>Events</div>
-                </a>
-            </div>
-            <div class="about">
-                <a href="#">
-                    <div><img src="output-onlinepngtools (3).png" alt=""></div>
-                    <div>About Us</div>
-                </a>
-            </div>
+    <div class="logo">
+        <div><img src="WhatsApp Image 2025-07-30 at 21.27.00_e7b2212c-modified.png" alt="logo"></div>
+        <div class="logotext">
+            <div class="main">Yuktikula Club</div>
+            <div class="main2">Official Club of CSE-DS Dept of GLBITM</div>
         </div>
     </div>
+    <!-- Hamburger Menu Button -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <div class="nav" id="navMenu">
+        <div class="home">
+            <a href="index.html">
+                <div><img src="output-onlinepngtools.png" alt=""></div>
+                <div>Home</div>
+            </a>
+        </div>
+        <div class="announcement">
+            <a href="#">
+                <div><img src="output-onlinepngtools (1).png" alt=""></div>
+                <div>Announcement</div>
+            </a>
+        </div>
+        <div class="events">
+            <a href="#">
+                <div><img src="output-onlinepngtools (2).png" alt=""></div>
+                <div>Events</div>
+            </a>
+        </div>
+        <div class="about">
+            <a href="about.html">
+                <div><img src="output-onlinepngtools (3).png" alt=""></div>
+                <div>About Us</div>
+            </a>
+        </div>
+    </div>
+</div>
 
     <div class="card1">
         <div class="title">
